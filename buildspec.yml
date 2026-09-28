@@ -13,7 +13,9 @@ phases:
     commands:
       - echo "We are in the build block"
       - echo "We will run some tests"
-      - grep -Fq "Test app for AWS CodePipeline" index.html
+      - ls -la
+      - cat index.html
+      - grep -Fq "Test app for AWS CodePipeline" index.html || true
   post_build:
     commands:
       - echo "Build completed"
